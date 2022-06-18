@@ -1,0 +1,2 @@
+INSERT INTO BOOK (title, description, genre, author, publisher, PUBLICATION_YEAR, volume, NUMBER_OF_PAGES, isbn)
+VALUES ('Livro 01', 'Descrição do livro 01', 'Terror', 'Autor 01', 'Editora 01', '2002', '3', 256, '978–85–333–0227–3');
