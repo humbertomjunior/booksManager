@@ -52,7 +52,7 @@ public class BookController {
         if(null == book.getId()) return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Optional.of("If you are trying to update informations from a book, use the method PUT instead."));
         Optional<Book> foundBook = this.service.findById(book.getId());
         if( foundBook.isEmpty() ) return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Optional.of("There is no book with this Id"));
-        return ResponseEntity.ok(Optional.of(service.update(foundBook.get())));
+        return ResponseEntity.ok(Optional.of(service.update(foundBook.get(), book)));
     }
 
     @PutMapping("/{id}")
