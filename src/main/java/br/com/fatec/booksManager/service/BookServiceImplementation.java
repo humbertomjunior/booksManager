@@ -35,6 +35,12 @@ public class BookServiceImplementation implements BookService {
     }
 
     @Override
+    public Book update(Book foundBook, Book book) {
+        book.setId(foundBook.getId());
+        return this.repository.save(book);
+    }
+
+    @Override
     public void deleteById(Long id) {
         try {
             this.repository.deleteById(id);
